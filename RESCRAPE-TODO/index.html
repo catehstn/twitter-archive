@@ -1,0 +1,20 @@
+<h1>Weeks to re-scrape</h1>
+<p>Three weeks need attention. Import will deduplicate so safe to redo.</p>
+<h2>1. 2020-02-10 to 2020-02-17 — MISSING (issue #86)</h2>
+<p>Zero tweets in DB for this week. Was never scraped.
+Search: <code>from:catehstn since:2020-02-10 until:2020-02-17</code></p>
+<h2>2. 2020-01-06 to 2020-01-13 — LOW (issue #104)</h2>
+<p>Only 25 tweets, Jan 9 entirely absent. Scroll more before saving.
+Search: <code>from:catehstn since:2020-01-06 until:2020-01-13</code></p>
+<h2>3. 2020-01-27 to 2020-02-03 — LOW (issue #105)</h2>
+<p>Only 13 tweets, Jan 27-30 each had just 1 tweet. Scroll more before saving.
+Search: <code>from:catehstn since:2020-01-27 until:2020-02-03</code></p>
+<h2>Workflow</h2>
+<ol>
+<li>Go to x.com, search the string above (no replies filter, zoom out browser)</li>
+<li>Scroll down until no more tweets load</li>
+<li>Save page → Downloads folder</li>
+<li><code>node database/parse-saved-page.js &quot;/path/to/file.html&quot;</code></li>
+<li><code>node database/import-scraped.js &quot;/path/to/file.js&quot;</code></li>
+<li>Delete the html, js, and _files folder</li>
+</ol>
